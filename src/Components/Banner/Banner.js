@@ -5,8 +5,11 @@ import axios from '../../Axios'
 function Banner() {
   const [movie,setMovie] = useState()
   useEffect(() => {
-    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((res)=>{ setMovie(res.data.results[0])})
-  }, [])
+    const randomNumber =Math.floor(Math.random() * 20);
+    // console.log(randomNumber);
+    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((res)=>{
+       setMovie(res.data.results[randomNumber])})
+  },[])
   return (
     <div style={{backgroundImage:`url(${ movie ? imageUrl+movie.backdrop_path : ""})`}} className='banner'>
       <div className='content'>

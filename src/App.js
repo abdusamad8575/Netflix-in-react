@@ -9,7 +9,7 @@ function App() {
     <div>
       <NavBar />
       <Banner />
-      <RowPost url={originals}   title='Netflif Originals'/>   
+      <RowPost url={originals} title='Netflif Originals'/>   
       <RowPost url={trending} title='Trending' isSmall/>   
       <RowPost url={action} title='Actions' isSmall/>   
       <RowPost url={comedy} title='Comedy Movies' isSmall/>   
